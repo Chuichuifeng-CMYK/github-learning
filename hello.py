@@ -1,11 +1,21 @@
-while True:
-    name = input("请输入名字（输入 q 退出）：")
+def greet(name):
+    name = name.strip()
 
     if name.lower() == "q":
-        print("程序结束。")
-        break
-
+        return "程序结束。"
     if name:
-        print(f"你好，{name}！")
-    else:
-        print("你好，学习者！")
+        return f"你好，{name}！"
+    return "你好，学习者！"
+
+
+def main():
+    while True:
+        name = input("请输入名字（输入 q 退出）：")
+        print(greet(name))
+
+        if name.strip().lower() == "q":
+            break
+
+
+if __name__ == "__main__":
+    main()
