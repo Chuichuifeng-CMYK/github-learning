@@ -16,3 +16,6 @@
 - 使用 Git Bash
 - 使用 git clone
 - 使用 VS Code 打开仓库
+## 分支练习
+
+这是我在 practice 分支中添加的内容。
