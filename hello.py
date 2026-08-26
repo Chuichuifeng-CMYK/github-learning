@@ -19,3 +19,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print(f"你好，{name}！
