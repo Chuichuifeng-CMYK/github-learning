@@ -4,7 +4,7 @@ def greet(name):
     if name.lower() == "q":
         return "程序结束。"
     if name:
-        return f"你好，{name}！"
+        return f"你好，{name}！
     return "你好，学习者！"
 
 
@@ -19,4 +19,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    print(f"你好，{name}！
