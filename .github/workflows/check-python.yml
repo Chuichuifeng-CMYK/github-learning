@@ -3,6 +3,7 @@ name: 检查 Python 程序
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   check:
