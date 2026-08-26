@@ -19,3 +19,4 @@
 ## 分支练习
 
 这是我在 practice 分支中添加的内容。
+正在学习 GitHub Actions。
