@@ -20,5 +20,5 @@ jobs:
 
       - name: 检查所有 Python 文件
         run: python -m compileall .
-              - name: 运行单元测试
+      - name: 运行单元测试
         run: python -m unittest
