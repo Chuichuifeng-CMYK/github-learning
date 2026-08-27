@@ -1,4 +1,21 @@
-tasks = []
+TASK_FILE = "tasks.txt"
+
+
+def load_tasks():
+    try:
+        with open(TASK_FILE, "r", encoding="utf-8") as file:
+            return [line.strip() for line in file if line.strip()]
+    except FileNotFoundError:
+        return []
+
+
+def save_tasks(tasks):
+    with open(TASK_FILE, "w", encoding="utf-8") as file:
+        for task in tasks:
+            file.write(task + "\n")
+
+
+tasks = load_tasks()
 
 while True:
     print("\n1. 添加任务")
@@ -12,6 +29,7 @@ while True:
         task = input("请输入任务：")
         if task:
             tasks.append(task)
+            save_tasks(tasks)
             print("任务已添加。")
 
     elif choice == "2":
@@ -31,6 +49,7 @@ while True:
             number = input("请输入要删除的任务编号：")
             if number.isdigit() and 1 <= int(number) <= len(tasks):
                 deleted_task = tasks.pop(int(number) - 1)
+                save_tasks(tasks)
                 print(f"已删除：{deleted_task}")
             else:
                 print("编号无效。")
